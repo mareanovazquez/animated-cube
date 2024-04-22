@@ -1,0 +1,69 @@
+
+h2{
+    text-align: center;
+}
+.dado {
+    width: 100px;
+    height: 100px;
+    transition: transform .9s;
+    transform-style: preserve-3d;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+.ladoA , .ladoB {
+    border: 2px solid black;
+    background: #3d405b;
+    width: 100px;
+    height: 100px;
+
+}
+
+.ladoA {
+    transform: translateZ(50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ladoB {
+    transform: rotateX(-90deg) translateZ(-50px);
+}
+
+.dado:hover {
+    transform: rotateX(89deg);
+}
+
+
+
+
+/* CONTADOR IMG ANIMATE */
+
+
+#contador-img-text {
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: "Fira Sans", sans-serif;
+    color: transparent;
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, #fff 50%, #fff 100%);
+    background-size: auto 200%;
+    background-position: 0 100%;
+    /* Comenzar desde abajo */
+    background-clip: text;
+    animation: cargaFondo4 2s ease-out;
+}
+
+@keyframes cargaFondo4 {
+    0% {
+        background-position: 0 0;
+
+        /* Comenzar desde abajo */
+    }
+
+    100% {
+        background-position: auto 100%;
+        /* Cargar completamente */
+    }
+}
