@@ -10,38 +10,41 @@ h2{
     margin: 0 auto;
     color: white;
     text-align: center;
+    
 }
 
-.ladoA , .ladoB {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        width: 100px;
+.ladoA, .ladoB, .ladoC {
+    position: absolute; /* Asegura que los lados se superpongan correctamente */
+    width: 100px;
     height: 100px;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .ladoA {
-    transform: translateZ(50px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    transform: rotateY(0deg) translateZ(50px);
 }
 
 .ladoB {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     transform: rotateX(-90deg) translateZ(-50px);
 }
 
-.dado:hover {
-    transform: rotateX(89deg);
+.ladoC {
+   
+    transform: rotateX(-180deg) translateZ(50px);
 }
+
 
 /* CONTADOR IMG ANIMATE */
 
 #contador1 {
     padding: 10px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 900;
     font-family: "Fira Sans", sans-serif;
     color: transparent;
@@ -50,24 +53,14 @@ h2{
     background-position: 0 100%;
     /* Comenzar desde abajo */
     background-clip: text;
-    animation: cargaContador1 2s ease-out;
+    
 }
 
-@keyframes cargaContador1 {
-    0% {
-        background-position: 0 0;
-        /* Comenzar desde abajo */
-    }
 
-    100% {
-        background-position: auto 100%;
-        /* Cargar completamente */
-    }
-}
 
 #contador2 {
     padding: 10px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 900;
     font-family: "Fira Sans", sans-serif;
     color: transparent;
@@ -78,11 +71,18 @@ h2{
     background-clip: text;
 }
 
-@keyframes cargaContador2 {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: auto 100%;
-    }
-}  
+
+
+#contador3 {
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: "Fira Sans", sans-serif;
+    color: transparent;
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, #000 50%, #000 100%);
+    background-size: auto 200%;
+    background-position: 0 100%;
+    /* Comenzar desde abajo */
+    background-clip: text;
+}
+
